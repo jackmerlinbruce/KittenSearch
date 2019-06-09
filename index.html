@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+
+    <!-- Popper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <style>
+    .main {
+        text-align: center;
+    }
+    .header {
+        margin-top: 100px;
+    }
+    .logo {
+        height: 50px;
+        vertical-align: middle;
+    }
+    .kittens {
+        width: 50%;
+        /* filter: grayscale(1) */
+    }
+    .my-buttons {
+        margin: 40px;
+    }
+    .credit {
+        text-align: right;
+    }
+    </style>
+</head>
+<body>
+    <div class="container" id="container">
+        <div class="main">
+            <div class="header">
+                <div class="wordmark">
+                    <img class="logo" id="logo" src="./javanese-cat.svg" alt="">
+                    <h1>KittenSearch&reg;</h1>
+                </div>
+                <p>We don't want your data. Only your kittens.</p>
+                <img class="kittens" id="kittens" src="http://pngimg.com/uploads/cat/cat_PNG50539.png" alt="" srcset="">
+                
+            </div>
+            <div>
+                <input class="form-control my-search-bar" id="my-search-bar" list="search-bar" placeholder="Search for a kitten...">
+                <datalist id="search-bar">
+                    <option value="Internet Explorer">
+                    <option value="Firefox">
+                    <option value="Chrome">
+                    <option value="Opera">
+                    <option value="Safari">
+                </datalist>
+            </div>
+            <div class="my-buttons">
+                <div class="btn-group btn-group">
+                    <button type="button" class="btn btn-outline-primary">Kitten Search</button>
+                    <button type="button" class="btn btn-outline-secondary">I'm Feeling Plucky</button>
+                </div>
+            </div>
+        </div>
+        <p class="credit text-muted">a Kitten Ltd.&reg; product</p>
+    </div>
+    <script>
+        document.getElementById('my-search-bar').addEventListener('click', e => {
+            document.getElementById('kittens').style.filter = `grayscale(0)`
+        })
+  
+    </script>
+</body>
+</html>
